@@ -165,3 +165,14 @@ footer p {
   font-size: 55px;
   color:rgb(255,255,255);
 }
+
+//登録フォーム用
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
