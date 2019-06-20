@@ -1,17 +1,18 @@
 <header>
   <h1 class="TitleLogo">Conhand</h1>
   <%= image_tag 'フリーの握手アイコン.png', class:'logo' %>
-  <ul class="header-nav">
-    <li class="header-item">
-      <%= link_to "ホーム",root_path %>
-    </li>
-    <li class="header-item">
-      <%= link_to "Log In","#" %>
-    </li>
-    <li class="header-item">
-      <%= link_to "Sign Up!","#" %>
-    </li>
-  </ul>
+
+       <ul class="header-nav">
+         <li class="header-item">
+           <%= link_to "ホーム",root_path %>
+         </li>
+         <li class="header-item">
+           <%= link_to "Log In","#" %>
+         </li>
+         <li class="header-item">
+           <%= link_to "Sign Up!","#" %>
+         </li>
+       </ul>
 </header>
 <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
