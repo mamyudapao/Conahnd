@@ -5,7 +5,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Hiragino Kaku Gothic Pro';
+  font-family: 'Hiragino Kaku Gothic ProN';
 }
 a {
   text-decoration: none ;
@@ -13,62 +13,74 @@ a {
 }
 a :hover {
   text-decoration: none;
+  background-color: rgb(29,161,242);
 }
 
 //header用スタイル
 header {
-  box-sizing: border-box;
-  height: 100px;
+  height: 55px;
   width: 100%;
   background-color: rgb(29,161,242);
 }
 
-.TitleLogo {
-  position: absolute;
-  top:15px;
-  left:20px;
-  margin-top: 0;
-  padding:20px,0,40px,30px;
+header .title-and-logo {
+  display: inline-flex;
+  width: 233px;
+  height: 48px;
+
+}
+
+.title-and-logo h1 {
+  margin:0;
   color: rgb(255,255,255);
 }
 
-.logo {
-  position: absolute;
-  left:190px;
-  bottom:0;
-  top:0;
+header .logo {
+  width: 70px;
+  height: 70px;
   margin: 0;
-  padding:0;
-  width:100px;
-  height: 100px;
-}
-.header-nav {
-  list-style: none;
-  padding:0;
-  text-align: right;
-}
-.header-item {
-  justify-content: flex-end;
-  display: inline;
-  text-decoration: none;
-
-}
-
-.header-item a{
-  font-size: 20px;
-  padding:10px;
-  margin-right: 10px;
   position: relative;
-  color: rgb(255,255,255);
-  opacity: 0.5;
-  top:10px;
-  border: 1px solid;
-  border-radius: 20px;
+  bottom: 10px;
 }
 
-.header-item a:hover {
-  text-decoration: none;
+header .header-menu {
+  float:right;
+}
+.nav .nav-item {
+  color: white;
+}
+
+.nav .nav-item :hover {
+  background-color: rgb(29,161,242);
+  color: white;
   opacity: 1;
+}
+
+//headerのnav-bar変更ver
+.navbar {
+  padding: 0;
+  padding-bottom: 10px;
+  border: 0;
+  margin: 0;
+}
+
+.dropdown-toggle {
+  background: rgb(29,161,242);
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+  background: rgb(29,161,242);
+}
+
+.nav .nav-item :hover {
+
+  background-color: initial;
+  color: initial;
+}
+
+.dropdown-menu :focus{
+  z-index: 1000;
+
 }
 
 //footer用スタイル
@@ -77,19 +89,17 @@ footer {
   margin: 0;
   padding: 0;
   background-color: rgb(29,161,242);
-  height: 70px ;
+  height: 60px ;
 }
 
 footer a {
   margin-right: 10px;
   color: rgb(255,255,255);
-  opacity: 0.5;
 }
 
 footer a:hover {
   text-decoration: none;
   color: rgb(255,255,255);
-  opacity: 1;
 }
 
 footer ul {
@@ -117,31 +127,29 @@ footer p {
   background: rgb(29,161,242);
   height:470px;
 }
-
+//homeのうち画像よりも上の部分
 .home h2 {
-  padding:0;
+  padding-left: 200px;
+  padding-top: 100px;
   margin:0;
-  position: relative;
-  top:65px;
-  left:220px;
   color: rgb(255,255,255);
   font-size: 35px;
   opacity: 0.75;
-  width:200px;
+  width:100%;
+  height:160px;
 }
 
 .home h1 {
   margin:0;
-  padding:0;
-  position: relative;
-  top:120px;
-  left:450px;
+  padding-left: 460px;
   color: rgb(255,255,255);
   font-size: 40px;
   font-weight: bold;
-  width: 800px;
-}
+  width:  100%;
+  height: 100px;
 
+}
+//homeのうち画像及び「ゲームを通じて新しい出会い、発見、感動を。」の部分
 .ps-image {
   width:100%;
   height: 1000px;
@@ -157,36 +165,171 @@ footer p {
 
 .home-image h1{
   position: absolute;
+  top:50%;
+  left: 20%;
   padding: 0;
   margin: 0;
-  top:500px;
-  left: 280px;
-  width:1200px;
+  width: auto;
   font-size: 55px;
   color:rgb(255,255,255);
 }
 
-//登録フォーム用
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+//homeのうち画像の下の部分
+.under-image-area {
   width: 100%;
-  margin-bottom: 15px;
+  height: 500px;
+  background: rgb(29,161,242);
 }
 
-input {
-  height: auto !important;
+.under-image-area h2 {
+  font-size: 50px;
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 20px;
+  color: rgb(255,255,255);
 }
+
+//登録フォーム用
+
+.sign-in-page {
+  background: rgb(49,49,49);
+  color: rgb(255,255,255);
+}
+
+.welcome-message {
+  width:40%;
+  height: 650px;
+  display: inline-block;
+}
+
+.welcome-message h1 {
+  margin: 0;
+  padding-left: 65px;
+  padding-top: 180px;
+  font-size: 60px;
+  width: auto;
+
+}
+
+.welcome-message p {
+  margin: 0;
+  padding-left: 65px;
+  padding-top: 50px;
+  font-size: 20px;
+  width: auto;
+}
+
+.register-form {
+  padding-top: 200px;
+  display: inline-block;
+  float: right;
+  width: 60%;
+}
+
 //ログインフォーム用
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
 #session_remember_me {
   width: auto;
   margin-left: 0;
+  margin-right: 10px;
+}
+
+.left-part {
+  margin: 0;
+  display: inline-block;
+  width: 50%;
+}
+
+.image-field {
+  display: inline-block;
+  width: 100%;
+  height: 450px;
+}
+
+.login-image {
+  width: 100%;
+  height: inherit;
+}
+
+.message-field {
+  display: inline-block;
+  margin: 0;
+  width:100%;
+  height: 350px;
+}
+
+.message-field p {
+  display: inline-block;
+  margin: 0;
+  padding-top: 130px;
+  padding-left: 140px;
+  width:50%;
+  font-size: 25px;
+
+}
+
+.message-field img {
+  margin: 0;
+  padding-bottom: 80px;
+  padding-left: 50px;
+
+}
+
+.right-part {
+  width: 50%;
+  height: 800px;
+  float: right;
+  color: rgb(255,255,255);
+  display: inline-block;
+  background: rgb(49,49,49)
+}
+
+.login-form {
+  margin-right: 200px;
+
+}
+
+.login-forms {
+  padding-top: 250px;
+  padding-left: 150px;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-conponent {
+  width: 100%;
+}
+
+.right-part span {
+  margin-left: 20px;
+}
+
+//ステータス用
+
+.status-title {
+  background: rgb(29,161,242);
+  width: 100%;
+  height: 250px;
+}
+
+.status-title h1 {
+  margin:0;
+  padding-top: 60px;
+  padding-left: 670px;
+  font-size: 60px;
+  color: rgb(255,255,255);
+}
+
+.now-status {
+  background: rgb(49,49,49);
+  width: 100%;
+  height: 550px;
+}
+
+.now-status h1 {
+  margin: 0;
+  padding-left: 450px;
+  padding-top: 220px;
+  font-size: 60px;
+  color: rgb(255,255,255);
+
 }

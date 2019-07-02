@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def rule
   end
+
+  def status
+  end
 end

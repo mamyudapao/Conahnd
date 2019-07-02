@@ -1,31 +1,29 @@
 <% provide(:title, "Sign Up!") %>
-<%= render "layouts/header" %>
-<div class="welcome-message">
-  <h1>Hello Gamers!!</h1>
-  <p>Conhandはゲームを一緒にプレイする仲間同士を繋げる新しいサービス。<br>
-    さぁ！自分がハマっているゲームを仲間と共に楽しもう！</p>
-</div>
-
-<div class="registration-form">
-  <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for(@user) do |f| %>
-          <%= render 'shared/error_messages' %>
-
-          <%= f.label :name%>
-          <%= f.text_field :name %>
-
-          <%= f.label :email %>
-          <%= f.email_field :email %>
-
-          <%= f.label :password %>
-          <%= f.password_field :password %>
-
-          <%= f.label :password_confirmation ,"Confirmation"%>
-          <%= f.password_field :password_confirmation %>
-
-          <%= f.submit "Create my account" , class:"btn btn-primary" %>
-          <% end %>
-      </div>
+<div class="sign-in-page">
+  <div class="welcome-message">
+    <h1>Hello Gamers!!</h1>
+    <p>Conhandはゲームを一緒にプレイする仲間同士<br>を繋げる新しいサービス。<br>
+      さぁ！自分がハマっているゲームを仲間と共に楽し<br>もう！</p>
     </div>
-</div>
+
+    <div class="register-form container">
+      <%= form_for (@user) do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name ,class:'form-control',placeholder:'Pleace enter your user name' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email ,class:'form-control', id:'exampleInputEmail1',placeholder:'Enter email' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password%>
+        <%= f.password_field :password, class: 'form-control', id: 'exampleInputPassword1', placeholder: 'Password'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation%>
+        <%= f.password_field :password_confirmation, class:'form-control', placeholder:'Password confirmation'%>
+      </div>
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+    </div>

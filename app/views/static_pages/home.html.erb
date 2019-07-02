@@ -1,11 +1,15 @@
 <%provide(:title,"Home")%>
-<%=render "layouts/header"%>
 <div class="home">
   <h2>Conahndは</h2>
-  <h1>ゲーマーとゲーマーと繋げる新しいSNS</h1>
+  <h1>ゲーマーとゲーマーと繋げる新しいSNS</h1><!-- 画像よりも上の部分 -->
 </div>
-<div class="home-image">
+<div class="home-image"><!-- 画像と「ゲームを通じて新しい出会い、発見、感動を」の部分  -->
   <h1 >ゲームを通じて新しい出会い、発見、感動を。</h1>
   <%= image_tag "gahag-0031608558.jpg",class:"ps-image" %>
 </div>
-<%= render "layouts/footer" %>
+<div class="under-image-area"><!-- 画像よりも下の部分 -->
+  <h2>もう一緒にプレイする仲間を探すときに、掲示板なんか使わなくてもいい。<br>
+    少しのステップで一緒にプレイする仲間を見つけられます。<br>
+    好きなことをシェアすることもできます。<br><br>
+    さあ！とにかくこの世界に飛び込もう！</h2>
+</div>

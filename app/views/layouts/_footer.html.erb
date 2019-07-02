@@ -1,18 +1,19 @@
 <footer>
-<ul>
-  <li>
-    <%= link_to "Conhandについて", root_path %>
+  <ul class="nav">
+  <li class="nav-item">
+      <%= link_to 'Conhandについて',root_path,class:'nav-link' %>
   </li>
-
-  <li>
-    <%= link_to "利用規約",rule_path %>
+  <li class="nav-item">
+      <%= link_to '利用規約',rule_path,class:'nav-link' %>
   </li>
-
-  <li>
-    <%= link_to "開発者SNS", "#" %>
+  <li class="nav-item">
+      <%= link_to 'ステータス','#',class:'nav-link' %>
+  </li>
+  <li class="nav-item">
+      <%= link_to '開発者SNS','https://twitter.com/forestenter',class:'nav-link' %>
   </li>
 </ul>
-<p class="Copylight">©Kenichi Noshian</p>
+  <p class="Copylight">© Kenichi Noshian</p>
 
 
 </footer>
