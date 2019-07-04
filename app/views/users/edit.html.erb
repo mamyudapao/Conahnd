@@ -1,0 +1,32 @@
+<% provide(:title, "Edit user") %>
+<div class="profile-edit-field">
+  <div class="profileimage-field">
+    <p class="image-edit">
+      <%= gravatar_for @user , size: 200%>
+    </p>
+  </div>
+
+  <div class="form-field">
+    <div class="container" >
+      <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <div class="form-group">
+        <%=f.label :name%>
+        <%=f.text_field :name, class: 'form-control'%>
+
+      </div>
+
+      場所<br>
+
+      生年月日<br>
+
+      自己紹介<br>
+
+      <%= f.submit "変更を保存する", class: "btn btn-primary" %>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
