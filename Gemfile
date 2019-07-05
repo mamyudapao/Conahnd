@@ -10,6 +10,9 @@ gem 'rails', '~> 5.2.3'
 #jqueryを追加
 gem "jquery-rails"
 gem 'bcrypt'
+gem 'faker' #fakeユーザー用gem
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
