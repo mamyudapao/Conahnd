@@ -391,20 +391,11 @@ footer p {
   .content {
     display: block;
     margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
   }
   .timestamp {
     color: $gray-light;
     display: block;
     margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
   }
 }
 
@@ -430,4 +421,10 @@ span.picture {
 .shows {
   background: rgb(49,49,49);
   color: white;
+}
+
+.row {
+  background: rgb(49,49,49);
+  color: white;
+  width: auto;
 }

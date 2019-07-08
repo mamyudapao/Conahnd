@@ -1,5 +1,4 @@
 <%provide(:title,"Home")%>
-<div class="home-log">
   <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -14,7 +13,6 @@
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
     </div>
-  </div>
   </div>
   <% else %>
   <div class="home">
