@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+has_many :microposts, dependent: :destroy
 attr_accessor :remember_token
 before_save {email.downcase!}
 validates :name, presence: true , length: {maximum: 50}
@@ -30,6 +31,10 @@ validates :password, presence: true,length: {minimum: 6},allow_nil: true
  def authenticate?(remember_token)
    return false if remember_digest.nil?
    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+ end
+
+ def feed
+   Micropost.where("user_id=?",id)
  end
 
  #ユーザーのログイン情報を破棄する

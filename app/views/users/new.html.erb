@@ -8,6 +8,7 @@
 
     <div class="register-form container">
       <%= form_for (@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name ,class:'form-control',placeholder:'Pleace enter your user name' %>
