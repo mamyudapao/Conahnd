@@ -189,6 +189,22 @@ footer p {
   color: rgb(255,255,255);
 }
 
+//ログイン時のホーム
+.left-home {
+  padding-right: 0;
+  padding-left: 50px;
+  padding-top: 30px;
+  .gravatar {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;  /* 横長画像の左上を基準に表示 */
+    display: inline-block;          /* 複数の画像を横に並べたい場合 */
+  }
+  h1 {
+    margin-top: 20px;
+    padding-left: 35px;
+  }
+}
+
 //登録フォーム用
 
 .sign-in-page {
@@ -415,6 +431,7 @@ span.picture {
 
 .row {
   width:100%;
+  margin: 0;
 }
 
 //userのツイート一覧ページ
@@ -427,4 +444,43 @@ span.picture {
   background: rgb(49,49,49);
   color: white;
   width: auto;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding-left: 10px;
+  width: 100%;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
 }

@@ -1,10 +1,9 @@
-User.create!(name: "nosiken",
-            email: "nosikenab@gmail.com",
-            password: "51015101Ab!",
-            password_confirmation: "51015101Ab!",
-            admin: true
-)
-
+# ユーザー
+User.create!(name:  "Example User",
+             email: "example@railstutorial.org",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin:     true)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -14,9 +13,19 @@ User.create!(name: "nosiken",
                email: email,
                password:              password,
                password_confirmation: password)
- end
- users = User.order(:created_at).take(6)
+end
+
+# マイクロポスト
+users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# リレーションシップ
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
