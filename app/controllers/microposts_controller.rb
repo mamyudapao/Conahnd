@@ -19,6 +19,14 @@ def destroy
   redirect_to request.referrer || root_url
 end
 
+def favorite (user)
+  likes.create(user_id: user.id)
+end
+
+def unfavorite (user)
+  likes.find_by(user_id: user.id).destroy
+end
+
 private
 
   def micropost_params

@@ -1,0 +1,16 @@
+<span class="like">
+   <% if @micropost.favorite?(current_user) %>
+     <%= form_for(@micropost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
+       <%= button_tag() do %>
+         <%= image_tag "baseline-favorite-24px.svg" %>
+       <% end %>
+     <% end %>
+   <% else %>
+     <%= form_for(@micropost.likes.build, remote: true) do |f| %>
+       <div><%= hidden_field_tag :micropost_id, @micropost.id %></div>
+       <%= button_tag() do %>
+         <%= image_tag "baseline-favorite_border-24px.svg" %>
+       <% end %>
+     <% end %>
+   <% end %>
+ </span>
