@@ -434,6 +434,10 @@ span.picture {
   margin: 0;
 }
 
+.field {
+  color: rgb(0,0,0);
+}
+
 //userのツイート一覧ページ
 .shows {
   background: rgb(49,49,49);
@@ -483,4 +487,9 @@ span.picture {
 
 .users.follow {
   padding: 0;
+}
+
+//followボタン
+.follow-button {
+  padding-top : 20px;
 }

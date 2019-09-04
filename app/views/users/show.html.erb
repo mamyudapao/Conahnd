@@ -10,10 +10,12 @@
       </section>
       <section class="stats">
       <%= render 'shared/stats' %>
+      <div class="follow-button">
+        <%= render 'follow_form' if logged_in? %>
+      </div>
     </section>
     </aside>
     <div class="col-md-6">
-          <%= render 'follow_form' if logged_in? %>
       <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
