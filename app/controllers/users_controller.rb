@@ -67,7 +67,7 @@ class UsersController < ApplicationController
   private #内部からのみアクセス可
 
   def user_params #Userモデルで許可するパラメータ
-    params.require(:user).permit(:name, :email,:password,:password_confirmation)
+    params.require(:user).permit(:name, :email,:password,:password_confirmation,:location,:birthday,:introduction)
   end
 
   # beforeアクション

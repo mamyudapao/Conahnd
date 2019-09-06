@@ -10,6 +10,20 @@
       </section>
       <section class="stats">
       <%= render 'shared/stats' %>
+      <div class="detailed-profile">
+        <div class="user-birthday">
+          <h4><%= image_tag 'birthday.png', class:'introduction-image' %>誕生日:<%= @user.birthday %></h4>
+        </div>
+        <div class="user-location">
+
+          <h4><%= image_tag 'location.png' ,class:'introduction-image' %>場所:<%= @user.location %></h4>
+        </div>
+        <div class="user-introduction">
+
+          <h4><%=image_tag 'introduction.png', class:'introduction-image'%>自己紹介:<%= @user.introduction %></h4>
+        </div>
+
+      </div>
       <div class="follow-button">
         <%= render 'follow_form' if logged_in? %>
       </div>
