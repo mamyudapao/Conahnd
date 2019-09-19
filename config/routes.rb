@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # micropostsコントローラーの追加ルーティング
+  get '/recruitments', to: 'recruitments#new'
+  post '/recruitments', to: 'recruitments#create'
+  get '/recruitments/show', to: 'recruitments#show'
+  # Likeのルーティング（未実装）
   get 'likes/create'
   get 'likes/destroy'
   root "static_pages#home"

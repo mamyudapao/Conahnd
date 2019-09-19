@@ -1,0 +1,12 @@
+<% provide(:title, '仲間募集ページ') %>
+<div class="container">
+  <div class="invite-form show-form">
+    <%= link_to "仲間を募集する", recruitments_path, class:'btn btn-primary invite-button' %>
+  </div>
+  <div class="show-recruit col-md-6">
+    <ol class="microposts">
+        <%= render @recruitment %>
+      </ol>
+      <%= will_paginate @recruitment %>
+  </div>
+</div>

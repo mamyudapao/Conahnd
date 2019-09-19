@@ -1,0 +1,11 @@
+<li id="recruit-<%= recruitment.id %>">
+  <p class="title">ゲームタイトル: <%= recruitment.title %></p>
+  <p class="recruitment_numbers">募集人数: <%= recruitment.recruitment_numbers %></p>
+  <p class="hardware">ハードウェア: <%= recruitment.hardware %></p>
+  <p class="game_id">ゲームID: <%= recruitment.game_id %></p>
+  <p class="communication_tool">コミュニケーションツール: <%= recruitment.communication_tool %></p>
+  <p class="comment">コメント: <%= recruitment.comment %></p>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(recruitment.created_at) %> ago.
+  </span>
+</li>

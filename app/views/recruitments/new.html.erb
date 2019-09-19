@@ -1,0 +1,36 @@
+<div class="recruitment_page">
+  <div class="container">
+    <div class="form-container">
+      <%= form_for (@recruitment) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="field1">
+        <%= f.label :ゲームタイトル, class:"Rlabel" %>
+        <%= f.select :title ,["モンハンワールド","Apex Legends","フォートナイト"]%>
+      </div>
+      <div class="field1">
+        <%= f.label :"募集人数" ,class:"Rlabel label-2"%>
+        <%= f.number_field :recruitment_numbers ,value:1 ,class:"recruitment_number"%>
+      </div>
+      <div class="field1">
+        <%= f.label :"ハード",class:"Rlabel label-3" %>
+        <%= f.select :hardware ,["PlayStation4","XboxOne","PC"] %>
+      </div>
+      <div class="field1">
+        <%= f.label :"アカウント名",class:"Rlabel label-4" %>
+        <%= f.text_field :game_id %>
+      </div>
+      <div class="field1">
+        <%= f.label :"コミュニケーションツール",class:"Rlabel label-5" %>
+        <%= f.select :communication_tool, ["VC","Skype","Discord","その他"]%>
+      </div>
+      <div class="field1">
+        <%= f.label :"コメント",class:"Rlabel label-7"%>
+        <%= f.text_area :comment,placeholder:"コメントを打ち込んでください。最大で140時までです。" %>
+      </div>
+      <div class="recruit-submit">
+        <%= f.submit "投稿",class: "btn btn-primary"%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+    </div>

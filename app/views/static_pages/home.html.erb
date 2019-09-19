@@ -13,10 +13,14 @@
       </section>
     </aside>
     <div class="col-md-4">
-      <h3>Micropost Feed</h3>
+      <h3>タイムライン</h3>
       <%= render 'shared/feed' %>
     </div>
+    <div class="invite-form">
+      <%= link_to "仲間を募集する", recruitments_path, class:'btn btn-primary invite-button' %>
+    </div>
   </div>
+
   <% else %>
   <div class="home">
     <h2>Conahndは</h2>

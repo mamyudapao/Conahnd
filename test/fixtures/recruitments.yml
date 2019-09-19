@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  recruitment_numbers: 1
+  hardware: MyString
+  game_id: MyString
+  communication_tool: MyString
+  comment: MyString
+
+two:
+  title: MyString
+  recruitment_numbers: 1
+  hardware: MyString
+  game_id: MyString
+  communication_tool: MyString
+  comment: MyString

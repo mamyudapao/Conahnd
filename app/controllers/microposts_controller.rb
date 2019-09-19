@@ -5,7 +5,7 @@ before_action :correct_user, only: :destroy
 def create
   @micropost = current_user.microposts.build(micropost_params)
   if @micropost.save
-    flash[:success] = "Micropost created!"
+    flash[:success] = "投稿に成功しました！"
     redirect_to root_url
   else
     @feed_items = []
@@ -15,17 +15,10 @@ end
 
 def destroy
   @micropost.destroy
-  flash[:success] = "Micropost deleted"
+  flash[:success] = "投稿を削除しました"
   redirect_to request.referrer || root_url
 end
 
-def favorite (user)
-  likes.create(user_id: user.id)
-end
-
-def unfavorite (user)
-  likes.find_by(user_id: user.id).destroy
-end
 
 private
 

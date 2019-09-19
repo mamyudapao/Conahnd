@@ -205,6 +205,17 @@ footer p {
     padding-left: 35px;
   }
 }
+//招待ボタン用
+.invite-button {
+  margin-top: 55px;
+  padding-top: 13px;
+  border:0;
+  width: 250px;
+  height:70px;
+  font-size: 30px;
+  background-color: rgb(29,161,242);
+  border-radius: 10px;
+}
 
 //登録フォーム用
 
@@ -506,4 +517,76 @@ span.picture {
 .introduction-image {
   width : 15px;
   height: 15px;
+}
+
+//募集画面用
+.recruitment_page {
+  background-color: rgb(49,49,49);
+
+  .form-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .field1 {
+    margin-bottom: 30px;
+  }
+
+  .Rlabel {
+    color: rgb(255,255,255);
+    font-size: 25px;
+  }
+
+  .label-2 {
+    margin-left: 15%;
+  }
+  .label-3 {
+    margin-left: 15%;
+  }
+  .label-4 {
+    margin-left: 15%;
+  }
+  .label-5 {
+    margin-left: 15%;
+  }
+  .recruit-submit {
+    margin-left: 10%;
+  }
+  #recruitment_title {
+    width: 70%;
+    height: 40px;
+    font-size: 25px;
+  }
+  #recruitment_recruitment_numbers {
+    width: 61%;
+    height: 40px;
+  }
+  #recruitment_hardware {
+    width: 63%;
+    height: 40px;
+    font-size: 25px;
+  }
+  #recruitment_game_id {
+    width: 56%;
+    height: 40px;
+    font-size: 20px;
+  }
+  #recruitment_communication_tool {
+    width: 43%;
+    height: 40px;
+    font-size:  25px;
+  }
+  #recruitment_comment {
+    width: 90%;
+    height: 100px;
+  }
+
+
+}
+
+.show-recruit {
+  margin-left: 25%;
+}
+.show-form {
+  display: inline-flex;
 }
