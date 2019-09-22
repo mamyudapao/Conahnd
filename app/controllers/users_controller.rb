@@ -5,7 +5,15 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index #indexページ用
-    @users = User.paginate(page: params[:page]) # Userモデルをページネーションして表示する,「page:」参照するページ番号を指定
+    if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
+        @q = User.ransack(search_params, activated_true: true)
+        @title = "Search Result"
+      else
+        @q = User.ransack(activated_true: true)
+        @title = "All users"
+      end
+      @users = @q.result.paginate(page: params[:page])
+
   end
 
   def new #サインアップ用
@@ -68,6 +76,10 @@ class UsersController < ApplicationController
 
   def user_params #Userモデルで許可するパラメータ
     params.require(:user).permit(:name, :email,:password,:password_confirmation,:location,:birthday,:introduction)
+  end
+
+  def search_params
+      params.require(:q).permit(:name_cont)
   end
 
   # beforeアクション

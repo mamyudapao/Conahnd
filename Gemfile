@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'ransack'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

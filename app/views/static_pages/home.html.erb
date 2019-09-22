@@ -16,9 +16,11 @@
       <h3>タイムライン</h3>
       <%= render 'shared/feed' %>
     </div>
-    <div class="invite-form">
-      <%= link_to "仲間を募集する", recruitments_path, class:'btn btn-primary invite-button' %>
-    </div>
+    <div class="search_form">
+      <%= render 'search_content_form' %>
+      <div class="invite-form">
+        <%= link_to "仲間を募集する", recruitments_path, class:'btn btn-primary invite-button' %>
+      </div>
   </div>
 
   <% else %>
