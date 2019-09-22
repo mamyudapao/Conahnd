@@ -4,13 +4,14 @@ before_action :correct_user, only: :destroy
 
 def create
   @micropost = current_user.microposts.build(micropost_params)
-  if @micropost.save
-    flash[:success] = "投稿に成功しました！"
-    redirect_to root_url
-  else
-    @feed_items = []
-    render 'static_pages/home'
-  end
+   if @micropost.save
+     flash[:success] = "Micropost created!"
+     redirect_to root_url
+   else
+     @q = Micropost.none.ransack
+     @feed_items = current_user.feed.paginate(page: params[:page])
+     render 'static_pages/home'
+   end
 end
 
 def destroy

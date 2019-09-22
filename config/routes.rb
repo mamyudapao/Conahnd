@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get 'likes/create'
   get 'likes/destroy'
   root "static_pages#home"
-  #検索用
-  get 'search' , to: 'static_pages#search'
   get '/rule',to: "static_pages#rule"
   get '/status', to: 'static_pages#status'
   get '/login' , to: "sessions#new"

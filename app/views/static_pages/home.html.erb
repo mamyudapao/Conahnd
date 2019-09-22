@@ -17,11 +17,12 @@
       <%= render 'shared/feed' %>
     </div>
     <div class="search_form">
-      <%= render 'search_content_form' %>
+        <%= render 'shared/microposts_search_form' %>
+      </div>
       <div class="invite-form">
         <%= link_to "仲間を募集する", recruitments_path, class:'btn btn-primary invite-button' %>
       </div>
-  </div>
+    </div>
 
   <% else %>
   <div class="home">
