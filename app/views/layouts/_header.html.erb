@@ -16,9 +16,6 @@
       <li  class="nav-item">
         <%= link_to '仲間募集タイムライン', recruitments_path, class:'nav-link' %>
       </li>
-      <li class="nav-item">
-        <%= link_to 'ヘルプ',"#",class:'nav-link' %>
-      </li>
       <% if logged_in? %>
       <li class="nav-item">
         <%= link_to "Users", users_path, class:'nav-link' %>
@@ -31,9 +28,6 @@
            <ul class="dropdown-menu">
              <li class="nav-item">
                <%= link_to "Profile", edit_user_path(current_user) ,class:'nav-link'%>  <%# Restfulなルーティングを設定すると自動的にこのpathが生成される。 %>
-             </li>
-             <li class="nav-item">
-               <%= link_to "Settings", '#',class:'nav-link' %>
              </li>
              <li class="divider"></li>
              <li>
