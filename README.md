@@ -1,5 +1,5 @@
 
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# Name
 
 Conhand(Connect hands)
 
