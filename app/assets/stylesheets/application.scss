@@ -522,7 +522,9 @@ span.picture {
 //募集画面用
 .recruitment_page {
   background-color: rgb(49,49,49);
-
+  p {
+    color:white;
+  }
   .form-container {
     margin-top: 50px;
     margin-bottom: 50px;
