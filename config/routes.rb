@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # micropostsコントローラーの追加ルーティング
-  get '/recruitments', to: 'recruitments#new'
-  post '/recruitments', to: 'recruitments#create'
-  get '/recruitments/show', to: 'recruitments#show'
+  get '/recruitments/recruit', to: 'recruitments#new'
+  post '/recruitments/recruit', to: 'recruitments#create'
+  get '/recruitments', to: 'recruitments#index'
   # Likeのルーティング（未実装）
   get 'likes/create'
   get 'likes/destroy'

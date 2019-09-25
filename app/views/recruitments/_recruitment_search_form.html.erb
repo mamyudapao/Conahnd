@@ -1,0 +1,9 @@
+<%= search_form_for @q do |f|  %>
+  <%= f.label :title_cont, "ゲームタイトルで絞り込む" %>
+  <div class="input-group">
+    <%= f.select :title_cont,[" ","モンハンワールド","Apex Legends","フォートナイト"], class: 'btn btn-control, btn-recruitment'%>
+    <span class="input-group-btn">
+      <%= f.submit '絞る',class: "btn btn-primary" %>
+    </span>
+  </div>
+<% end %>

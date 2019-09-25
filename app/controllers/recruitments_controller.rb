@@ -1,4 +1,14 @@
 class RecruitmentsController < ApplicationController
+
+  def index
+    if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
+      @q = Recruitment.ransack(search_params, activated_true: true)
+    else
+      @q = Recruitment.ransack(activated_true: true)
+    end
+    @recruitment = @q.result.paginate(page: params[:page])
+  end
+
   def new
     @recruitment = Recruitment.new
   end
@@ -13,13 +23,14 @@ class RecruitmentsController < ApplicationController
     end
   end
 
-  def show
-    @recruitment = Recruitment.paginate(page: params[:page])
-  end
 
   private
   def recruitment_params #Userモデルで許可するパラメータ
     params.require(:recruitment).permit(:title, :recruitment_numbers,:hardware,:game_id,:communication_tool,:comment)
+  end
+
+  def search_params
+    params.require(:q).permit(:title_cont)
   end
 
 end
