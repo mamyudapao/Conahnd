@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  require 'net/http'
+  require 'uri'
   def home
     if logged_in? #ログイン済みか調べるメソッド
       if logged_in?
@@ -20,8 +22,13 @@ class StaticPagesController < ApplicationController
     @contents = @q.result(distinct: true)
   end
 
-  def rule
-
+  def status
+    @status_code = hpStatus
+    if @status_code == 200 || 201
+      @status = "正常に稼働中です"
+    else
+      @status = "正常に稼働していません"
+    end
   end
 
   private

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper # SessionsHelperを読み込む
+  include StaticPagesHelper #StaticPagesHelperを読み込む
 
   private
 
