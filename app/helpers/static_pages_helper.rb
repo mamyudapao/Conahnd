@@ -3,7 +3,7 @@ module StaticPagesHelper
   require 'uri'
 
   def hpStatus
-    uri = URI.parse('https://www.google.com')
+    uri = URI.parse("https://conhand.herokuapp.com/")
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
     http.get('/')
     end
