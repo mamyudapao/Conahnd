@@ -6,6 +6,8 @@ Conhand(Connect hands)
 ConhandはTwitterのようなSNSに簡単にゲーム仲間を募集できる機能を追加したサービスである。
 Ruby及びRuby on Railsを用いて開発した。
 サービスURL:https://conhand.herokuapp.com/
+テストユーザメールアドレス:test@example.com
+パスワード:password
 
 # Features
 
